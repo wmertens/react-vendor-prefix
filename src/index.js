@@ -74,6 +74,8 @@ function flexbox(properties) {
 
     if(properties.display === 'flex') {
       properties.display = '-webkit-flex';
+    } else if(properties.display === 'inline-flex') {
+      properties.display = '-webkit-inline-flex';
     }
 
     ['alignItems', 'justifyContent', 'flexDirection', 'flex', 'flexWrap'].forEach((prop) => {
@@ -83,6 +85,8 @@ function flexbox(properties) {
   } else if (navigator.appVersion.indexOf("MSIE 10") !== -1) {
     if(properties.display === 'flex') {
       properties.display = '-ms-flexbox';
+    } else if(properties.display === 'inline-flex') {
+      properties.display = '-ms-inline-flexbox';
     }
 
     // @TODO: implement 2012 flexbox syntax
